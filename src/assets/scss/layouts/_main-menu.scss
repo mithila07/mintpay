@@ -1,0 +1,103 @@
+.overlay {
+    position: fixed;
+    background: $primary-black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 1031;
+    padding: 1rem;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+
+        li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+
+            &:nth-of-type(2) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .45s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .50s;
+            }
+        }
+    }
+
+    nav {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 6rem;
+        
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+
+        li {
+            display: inline-block;
+            opacity: 0;
+
+            a {
+                display: inline-block;
+                position: relative;
+                color: $white;
+                text-decoration: none;
+                padding: 0 1.5rem;
+                font-weight: 700;
+                line-height: 1;
+
+                &:hover:after,
+                &:focus:after,
+                &:active:after {
+                    width: 100%;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 65%;
+                    left: 50%;
+                    width: 0%;
+                    transform: translate(-50%, -50%);
+                    height: 20px;
+                    background: $primary-pink;
+                    transition: .35s;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mintpay-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "jquery": "^3.5.1",
+    "parcel-bundler": "^1.12.4",
+    "popper.js": "^1.16.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8",
+    "scrollmagic": "^2.0.8",
+    "slick-carousel": "^1.8.1",
+    "tilt.js": "^1.2.1"
+  },
+  "dependencies": {}
+}

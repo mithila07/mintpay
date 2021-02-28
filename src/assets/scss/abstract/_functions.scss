@@ -1,0 +1,79 @@
+// Breakpoint values for min-width operators.
+$breakpoints: (
+    small : 576px,
+    medium: 768px,
+    large : 992px,
+    x-large: 1200px
+);
+
+// Font sizes, w/ optional line-heights for each breakpoint.
+// Null is mobile, no breakpoint.
+$p-font-sizes: (
+    null : (14px, 20px),
+);
+
+$h1-font-sizes: (
+    null : (30px, 40px),
+    medium : (40px, 1),
+    large: (60px, 1.5)
+);
+
+$h2-font-sizes: (
+    null : (25px, 35px),
+    medium : (35px, 1px),
+    large: (50px, 1.5)
+);
+
+$h3-font-sizes: (
+    null : (25px, 35px),
+    x-large: (30px, 1.5)
+);
+
+$h4-font-sizes: (
+    null : (16px, 20px),
+    medium : (18px, 30px),
+);
+
+$h5-font-sizes: (
+    null : (16px, 30px),
+);
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            @include make-font-size($fs-font-size);
+        }
+
+        @else {
+
+            // If $fs-font-size is a key that exists in
+            // $fs-breakpoints, use the value
+            @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+                $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+            }
+
+            @media screen and (min-width: $fs-breakpoint) {
+                @include make-font-size($fs-font-size);
+            }
+        }
+    }
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size)=="list" {
+        font-size: nth($fs-font-size, 1);
+
+        @if (length($fs-font-size) > 1) {
+            line-height: nth($fs-font-size, 2);
+        }
+    }
+
+    @else {
+        font-size: $fs-font-size;
+    }
+}

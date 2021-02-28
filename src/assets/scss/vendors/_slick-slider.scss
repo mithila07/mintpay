@@ -1,0 +1,25 @@
+.slick-slide {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.slick-current {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.slick-active {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.slider {
+    &__item {
+        padding: 0 1rem;
+
+        img {
+            width: 100%;
+            opacity: 0.2;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.hamburger-menu {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 35px;
+    cursor: pointer;
+    z-index: 1032;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 70px;
+        background-color: $blue-100;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: -1;
+        top: -10px;
+        transition: .35s all;
+    }
+
+    svg {
+        stroke: $primary-black;
+        transition: .2s;
+
+        g {
+            &:first-child {
+                opacity: 1;
+                transition: opacity 0s .2s;
+
+                line {
+                    transition: transform .2s .2s;
+                    transform: translateY(0px);
+                }
+            }
+
+            &:last-child {
+                opacity: 0;
+                transition: opacity 0s .2s;
+
+                line {
+                    transition: transform .2s;
+                    transform: rotate(0deg);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+
+    &.-menu-open {
+        &::before {
+            background-color: rgba($blue-100, 0.1);
+        }
+
+        svg {
+            stroke: $white;
+
+            g {
+                &:first-child {
+                    opacity: 0;
+
+                    line {
+                        transition: transform .2s;
+
+                        &:first-child {
+                            transform: translateY(7px);
+                        }
+
+                        &:last-child {
+                            transform: translateY(-7px);
+                        }
+                    }
+                }
+
+                &:last-child {
+                    opacity: 1;
+
+                    line {
+                        transition: transform .2s .2s;
+
+                        &:first-child {
+                            transform: rotate(45deg);
+                        }
+
+                        &:last-child {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+$primary-font: 'Be Vietnam', sans-serif;
+
+h1,
+.h1 {
+    font-weight: 700;
+    @include font-size($h1-font-sizes);
+    margin-bottom: 0;
+}
+
+h2,
+.h2 {
+    font-weight: 700;
+    @include font-size($h2-font-sizes);
+    margin-bottom: 0;
+}
+
+h3,
+.h3 {
+    font-weight: 700;
+    @include font-size($h3-font-sizes);
+    margin-bottom: 0;
+}
+
+h4,
+.h4 {
+    font-weight: 400;
+    @include font-size($h4-font-sizes);
+    margin-bottom: 0;
+}
+
+h5,
+.h5 {
+    font-weight: 400;
+    @include font-size($h5-font-sizes);
+    margin-bottom: 0;
+}
+
+h6,
+.h6 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+p,
+b,
+strong,
+i,
+em,
+mark,
+del,
+ins,
+.p {
+    @include font-size($p-font-sizes);
+    margin-bottom: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.mp-text-primary {
+    color: $primary-black !important;
+}
+
+.mp-text-light {
+    color: $white !important; 
+}
+
+.mp-text-dark-blue {
+    color: $primary-blue !important;
+}
