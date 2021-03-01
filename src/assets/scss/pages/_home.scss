@@ -46,3 +46,127 @@
         }
     }
 }
+
+.banner-section {
+    padding: 6rem 0;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url('/assets/img/banner-1.jpg') no-repeat center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &.black-gradient {
+        background: linear-gradient(270.25deg, rgba(39, 50, 63, 0.9) 50%, rgba(236, 243, 248, 0.261) 110.89%);
+    }
+
+    &.blue-gradient {
+        background: linear-gradient(95.54deg, rgba(0, 67, 113, 0.9) 13.3%, rgba(156, 193, 218, 0.9) 103.07%);
+
+        &::before {
+            background: url('/assets/img/banner-2.jpg') no-repeat center top;
+        }
+    }
+
+    .three-text-line {
+        margin-bottom: 1.5rem;
+
+        .dot-separator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $white;
+            margin: 1rem 1.5rem 0;
+        }
+    }
+
+    h4 {
+        font-weight: 500;
+    }
+}
+
+.split-section {
+    padding: 6rem 0;
+
+    .img-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            height: 40rem;
+        }
+
+        .dot-square {
+            background-color: transparent;
+            background-image: radial-gradient(rgba($secondary-blue, 0.2) 15%, transparent 0%),
+                radial-gradient(rgba($secondary-blue, 0.2) 15%, transparent 0%);
+            background-size: 30px 30px;
+            width: 25rem;
+            height: 25rem;
+            position: absolute;
+            z-index: -1;
+            left: 10px;
+            bottom: -6rem;
+        }
+    }
+}
+
+.testimonial-section {
+    padding: 6rem 0;
+
+    h4 {
+        font-weight: 500;
+    }
+
+    .testimonial-slider {
+        .testimonial {
+            &__text {
+                color: $primary-black;
+                font-size: clamp(25px, 5vw, 40px);
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        .slick-dots {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+
+            li {
+                button {
+                    height: 8px;
+                    border: none;
+                    width: 30px;
+                    padding: 0;
+                    border-radius: 10px;
+                    margin: 0.5rem;
+                    font-size: 0;
+                    background-color: rgba($secondary-blue, 0.2);
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: $secondary-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logo-section {
+    padding: 6rem 0;
+}

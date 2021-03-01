@@ -1,0 +1,9 @@
+.navbar {
+    transition: .35s;
+
+    &.navbar-sticky-top {
+        transition: .35s;
+        background-color: $white;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.15);
+    }
+}

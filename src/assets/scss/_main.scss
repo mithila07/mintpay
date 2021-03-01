@@ -14,7 +14,9 @@
 @import "components/buttons";
 
 // Layouts
+@import "layouts/top-navbar";
 @import "layouts/main-menu";
+@import "layouts/main-footer";
 
 // Pages
 @import "pages/home";
