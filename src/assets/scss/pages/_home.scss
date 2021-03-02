@@ -98,10 +98,16 @@
     .img-wrapper {
         position: relative;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        margin-top: 3rem;
+
+        @media (min-width: 992px) {
+            margin-top: 0;
+            justify-content: flex-end;
+        }
 
         img {
-            height: 40rem;
+            height: clamp(25rem, 10vw, 40rem);
         }
 
         .dot-square {
@@ -109,12 +115,18 @@
             background-image: radial-gradient(rgba($secondary-blue, 0.2) 15%, transparent 0%),
                 radial-gradient(rgba($secondary-blue, 0.2) 15%, transparent 0%);
             background-size: 30px 30px;
-            width: 25rem;
-            height: 25rem;
+            width: 15rem;
+            height: 15rem;
             position: absolute;
             z-index: -1;
-            left: 10px;
+            left: 100px;
             bottom: -6rem;
+
+            @media (min-width: 992px) {
+                width: 25rem;
+                height: 25rem;
+                left: 10px;
+            }
         }
     }
 }
@@ -130,7 +142,7 @@
         .testimonial {
             &__text {
                 color: $primary-black;
-                font-size: clamp(25px, 5vw, 40px);
+                font-size: clamp(25px, 3vw, 40px);
                 font-weight: 700;
                 text-align: center;
             }

@@ -1,4 +1,60 @@
 .main-footer {
-    padding: 8rem 0;
+    padding: 6rem 0 3rem;
     background-color: $blue-100;
+
+    .footer-block {
+        &__title {
+            font-weight: 600;
+        }
+
+        &__text {
+            color: rgba($primary-black, 0.5);
+
+            a {
+                color: rgba($primary-black, 0.5);
+                text-decoration: none;
+                transition: .35s;
+
+                &:hover {
+                    color: $primary-black;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__nav {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        &__logos {
+            img {
+                height: 30px;
+            }
+        }
+
+        &__form {
+            input {
+                border: 0;
+                background-color: $white;
+                padding: 0 1rem;
+                height: 35px;
+                border-radius: 5px;
+                color: $primary-black;
+                transition: .25s;
+
+                &:focus {
+                    outline: 0;
+                    box-shadow: 0 0 10px rgba($black, 0.1);
+                }
+            }
+        }
+    }
+
+    .footer-bottom-text {
+        font-size: 12px;
+        color: rgba($primary-black, 0.5);
+        padding-top: 2rem;
+    }
 }

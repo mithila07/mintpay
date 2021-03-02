@@ -8,4 +8,10 @@ body {
     margin: 0;
     padding: 0;
     color: $primary-black;
+    font-size: 14px;
+
+    &.menu-open {
+        position: fixed;
+        height: 100vh;
+    }
 }

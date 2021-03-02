@@ -79,4 +79,12 @@
             color: $primary-blue;
         }
     }
+
+    &--footer {
+        height: 35px;
+        padding: 0 1rem;
+        font-weight: 400;
+        background-color: $primary-blue;
+        font-size: 14px;
+    }
 }
