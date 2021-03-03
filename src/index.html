@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-        <link href="assets/uicons/css/uicons-solid-rounded.css" rel="stylesheet">
+    <link href="assets/uicons/css/uicons-solid-rounded.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="assets/scss/_main.scss">
     <title>Mintpay</title>
@@ -70,10 +70,16 @@
 
                     <ul class="navbar-nav flex-shrink-0 flex-row">
                         <li class="nav-item me-4">
-                            <a class="nav-link signup" aria-current="page" href="#">Sign up <i class="fi-sr-user"></i></a>
+                            <a class="nav-link signup" aria-current="page" href="#">
+                                <span class="d-none d-sm-inline-block">Sign up</span> 
+                                <i class="fi-sr-user"></i>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link login" href="#">Log in <i class="fi-sr-shopping-bag"></i></a>
+                        <li class="nav-item pe-3 pe-sm-0">
+                            <a class="nav-link login" href="#">
+                                <span class="d-none d-sm-inline-block">Log in</span>
+                                <i class="fi-sr-shopping-bag"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -86,16 +92,31 @@
 
         <div class="container hero-container">
             <div class="row h-100">
-                <div class="col-12 col-md-5 d-flex align-items-center">
-                    <div class="hero-section">
-                        <h1 class="mb-5">Shop Now.<br>Pay Later.</h1>
-                        <h4 class="mp-text-dark-blue mb-5">You can now shop at your favourite online store today and pay
+                <div class="col-12 col-md-5 d-flex flex-column justify-content-start justify-content-md-center">
+                    <div class="hero-section text-center text-md-start">
+                        <h1 class="mb-5 d-none d-md-block">Shop Now.<br>Pay Later.</h1>
+                        <h1 class="my-4 d-md-none">Shop Now. Pay Later.</h1>
+                    </div>
+                    <div class="d-flex align-items-center position-relative d-md-none w-100 my-5">
+                        <div class="slider w-100">
+                            <div class="slider__item"><img src="assets/img/1.png" alt=""></div>
+                            <div class="slider__item"><img src="assets/img/2.png" alt=""></div>
+                            <div class="slider__item"><img src="assets/img/3.png" alt=""></div>
+                            <div class="slider__item"><img src="assets/img/4.png" alt=""></div>
+                        </div>
+
+                        <div class="hero-img">
+                            <img src="assets/img/bag-popping-out.png" alt="">
+                        </div>
+                    </div>
+                    <div class="hero-section text-center text-md-start mt-4 mt-md-0">
+                        <h4 class="mp-text-dark-blue mb-4 mb-md-5">You can now shop at your favourite online store today and pay
                             later using mintpay.</h4>
                         <a class="mp-btn" href="#">Shop now</a>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-7 d-flex align-items-center position-relative">
+                <div class="col-12 col-md-7 d-none d-md-flex align-items-center position-relative">
                     <div class="slider w-100">
                         <div class="slider__item"><img src="assets/img/1.png" alt=""></div>
                         <div class="slider__item"><img src="assets/img/2.png" alt=""></div>
@@ -141,11 +162,11 @@
     </section>
     <section class="banner-section black-gradient">
         <div class="container text-center">
-            <div class="three-text-line d-flex align-items-center justify-content-center flex-wrap">
+            <div class="three-text-line d-flex flex-column flex-sm-row align-items-center justify-content-center flex-wrap">
                 <h2 class="mp-text-light">No interest</h2>
-                <div class="dot-separator"></div>
+                <div class="dot-separator d-none d-sm-block"></div>
                 <h2 class="mp-text-light">No hidden fees</h2>
-                <div class="dot-separator"></div>
+                <div class="dot-separator d-none d-sm-block"></div>
                 <h2 class="mp-text-light">No worries</h2>
             </div>
 
@@ -157,10 +178,11 @@
     <section class="split-section">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center text-center text-lg-start">
+                <div
+                    class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center text-center text-lg-start">
                     <h2 class="mp-text-dark-blue d-none d-lg-block mb-5">Own your<br>online shopping<br>freedom</h2>
                     <h2 class="mp-text-dark-blue d-lg-none mb-4">Own your online shopping freedom</h2>
-                    <h4 class="mb-5 pe-5">Don't let low balance ruin your shopping experience. With mintpay, you can buy
+                    <h4 class="mb-5 pe-lg-5">Don't let low balance ruin your shopping experience. With mintpay, you can buy
                         what
                         you want-when you want it.</h4>
                     <button class="mp-btn mp-btn--secondary">Shop now</button>
@@ -232,13 +254,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <img class="w-100 px-4 px-md-5" src="assets/img/stripes-n-checkes.png" alt="">
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                     <img class="w-100 px-4 px-md-5" src="assets/img/urban.png" alt="">
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                     <img class="w-100 px-4 px-md-5" src="assets/img/iris-garden.png" alt="">
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                     <img class="w-100 px-4 px-md-5" src="assets/img/zigma-jones.png" alt="">
                 </div>
             </div>
@@ -270,7 +292,8 @@
                 <div class="col-12 col-lg-6 col-xl-3 mt-4 mt-xl-0">
                     <div class="footer-block">
                         <h4 class="footer-block__title mb-4">Banking Partners</h4>
-                        <div class="footer-block__logos d-flex flex-wrap">
+                        <div
+                            class="footer-block__logos d-flex flex-wrap justify-content-center justify-content-lg-start">
                             <img class="me-4" src="assets/img/mastercard-logo.png" alt="">
                             <img class="" src="assets/img/seylan-logo.png" alt="">
                         </div>
@@ -289,7 +312,8 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="footer-bottom-text text-center">Copyright 2021 &copy; Mintpay Pte Ltd. All rights reserved.</div>
+                    <div class="footer-bottom-text text-center">Copyright 2021 &copy; Mintpay Pte Ltd. All rights
+                        reserved.</div>
                 </div>
             </div>
         </div>

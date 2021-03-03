@@ -7,6 +7,16 @@
         box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.15);
     }
 
+    .navbar-brand {
+        svg {
+            width: 100px;
+
+            @media (min-width: 576px) {
+                width: 160px;
+            }
+        }
+    }
+
     .navbar-nav {
         .nav-item {
             transition: .35s;
@@ -22,8 +32,12 @@
 
                 i {
                     margin-left: 10px;
-                    font-size: 14px;
+                    font-size: 20px;
                     font-weight: 400;
+
+                    @media (min-width: 576px) {
+                        font-size: 14px;
+                    }
                 }
 
                 &.signup {
