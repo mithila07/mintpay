@@ -25,6 +25,34 @@ $(function () {
     });
     //slick slider ends
 
+    //logo slider starts
+    $('.logo-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 6000,
+        arrows: false,
+        dots: false,
+        cssEase: 'linear',
+        Infinite: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+    //logo slider ends
+
     //testimonial-slider starts
     $('.testimonial-slider').slick({
         slidesToShow: 1,
