@@ -4,7 +4,9 @@ require("jquery/dist/jquery.js");
 
 import AOS from 'aos';
 
-AOS.init();
+AOS.init({
+    disable: 'tablet'
+});
 
 
 $(function () {
@@ -70,6 +72,46 @@ $(function () {
         Infinite: true
     });
     //testimonial-slider ends
+
+    //shop-slider starts
+    $('.store-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 6000,
+        arrows: false,
+        dots: false,
+        cssEase: 'linear',
+        Infinite: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+    //shop-slider ends
 
     //fixed top bar class toggle starts
     $(window).scroll(function () {
