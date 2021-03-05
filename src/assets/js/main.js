@@ -2,6 +2,10 @@ var jquery = require("jquery");
 window.$ = window.jQuery = jquery; // notice the definition of global variables here
 require("jquery/dist/jquery.js");
 
+import AOS from 'aos';
+
+AOS.init();
+
 
 $(function () {
     // main-menu and hamburger icon toggle starts

@@ -112,6 +112,11 @@
 
         img {
             height: clamp(25rem, 10vw, 40rem);
+
+            @media (min-width: 1200px) {
+                width: 80%;
+                height: auto;
+            }
         }
 
         .dot-square {
