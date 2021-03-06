@@ -1,25 +1,84 @@
 .filter-block {
+    position: sticky;
+    top: 69px;
+    z-index: 1000;
+    margin-bottom: 6rem;
+
+    &--sticky-top {
+        background: $blue-100;
+        padding: 0.75rem 0;
+    }
+
     &__text {
         font-size: 18px;
         font-weight: 500;
         padding-top: 8px;
     }
 
-    &__btns {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+    &__slider {
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
 
-        li {
+        .slick-list {
+            padding: 0 1rem;
+        }
+
+        .slick-arrow {
+            background-color: $white;
+            box-shadow: 0px 0px 6px rgba($black, 0.2);
+            border-radius: 5px;
+            height: 40px;
+            width: 40px;
+            font-size: 0;
+            border: 0;
+            position: relative;
+            flex-shrink: 0;
+            margin: 0.5rem 0;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $primary-blue;
+                font-family: uicons-solid-rounded !important;
+                font-size: 18px;
+            }
+
+            &.slick-prev {
+                &::before {
+                    content: "\f110";
+                }
+            }
+
+            &.slick-next {
+                &::before {
+                    content: "\f111";
+                }
+            }
+
+            &.slick-disabled {
+                background-color: rgba($primary-black, 0.1);
+                box-shadow: none;
+
+                &::before {
+                    color: rgba($primary-black, 0.5);
+                }
+            }
+        }
+
+        &__item {
             font-size: 16px;
             font-weight: 500;
             background-color: $white;
-            box-shadow: 0px 0px 6px rgba($black, 0.2);
+            box-shadow: 0px 0px 5px rgba($black, 0.1);
             border-radius: 8px;
             padding: 8px 20px;
-            margin: 0 0.5rem 1rem;
+            margin: 0.5rem;
             cursor: pointer;
             transition: .35s;
 
@@ -36,7 +95,7 @@
 }
 
 .stores-section {
-    padding: 6rem 0;
+    padding: 2rem 0 6rem;
 
     .category-block {
         margin-bottom: 3rem;
@@ -75,15 +134,27 @@
     margin: 3rem 0 6rem;
 
     &__item {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         outline: 0;
+
+        @media (min-width: 768px) {
+            padding: 0 1rem;
+        }
 
         .store-img {
             img {
                 width: 100%;
-                height: 350px;
+                height: 250px;
                 border-radius: 10px;
                 object-fit: cover;
+
+                @media (min-width: 768px) {
+                    height: 300px;
+                }
+
+                @media (min-width: 1444px) {
+                    height: 350px;
+                }
             }
 
             .store-link {
@@ -97,7 +168,7 @@
                 justify-content: center;
                 transition: .35s;
                 opacity: 0;
-                
+
                 a {
                     color: $primary-blue;
                     font-weight: 600;

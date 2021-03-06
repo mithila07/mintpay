@@ -83,6 +83,7 @@ $(function () {
         arrows: false,
         dots: false,
         cssEase: 'linear',
+        lazyLoad: 'ondemand',
         Infinite: true,
         responsive: [
             {
@@ -102,16 +103,42 @@ $(function () {
                 settings: {
                     slidesToShow: 2,
                 }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                }
             }
         ]
     });
     //shop-slider ends
+
+    //filter-slider starts
+    $('.filter-block__slider').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        speed: 300,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+      });
+    //filter-slider ends
 
     //fixed top bar class toggle starts
     $(window).scroll(function () {
@@ -132,4 +159,14 @@ $(function () {
         }
     });
     //fixed top bar class toggle ends
+
+    //filter sticky top starts
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 180) {
+            $(".filter-block").addClass("filter-block--sticky-top");
+        } else {
+            $(".filter-block").removeClass("filter-block--sticky-top");
+        }
+    });
+    //filter sticky top ends
 });
