@@ -161,8 +161,11 @@ $(function () {
     //fixed top bar class toggle ends
 
     //filter sticky top starts
+    var firstHeight = $('.pink-bg').css("height");
+    var height = parseInt(firstHeight);
+    
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 180) {
+        if ($(window).scrollTop() > height) {
             $(".filter-block").addClass("filter-block--sticky-top");
         } else {
             $(".filter-block").removeClass("filter-block--sticky-top");
