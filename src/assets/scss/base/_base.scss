@@ -2,6 +2,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     height: 100%;
     font-family: $primary-font;
@@ -9,6 +13,7 @@ body {
     padding: 0;
     color: $primary-black;
     font-size: 14px;
+    overflow-x: hidden;
 
     &.menu-open {
         position: fixed;
