@@ -2,6 +2,8 @@ var jquery = require("jquery");
 window.$ = window.jQuery = jquery; // notice the definition of global variables here
 require("jquery/dist/jquery.js");
 
+import 'slick-carousel';
+
 import AOS from 'aos';
 
 AOS.init({
@@ -72,41 +74,6 @@ $(function () {
         Infinite: true
     });
     //testimonial-slider ends
-
-    //shop-slider starts
-    $('.store-slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 6000,
-        arrows: false,
-        dots: false,
-        cssEase: 'linear',
-        lazyLoad: 'ondemand',
-        Infinite: true,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ]
-    });
-    //shop-slider ends
 
     //filter-slider starts
     $('.filter-block__slider').slick({
