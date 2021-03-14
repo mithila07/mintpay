@@ -1,10 +1,9 @@
+import 'slick-carousel';
+import AOS from 'aos';
+
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery; // notice the definition of global variables here
 require("jquery/dist/jquery.js");
-
-import 'slick-carousel';
-
-import AOS from 'aos';
 
 AOS.init({
     disable: 'tablet'
