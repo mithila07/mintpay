@@ -1,52 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<include src="src/layouts/head.html" locals='{"pageTitle": "Mintpay | Sri Lanka`s No.1 Buy now pay later service"}'>
+</include>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link href="assets/uicons/css/uicons-solid-rounded.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/scss/_main.scss">
-    <title>Mintpay | Sri Lanaka's No.1 Buy now pay later service</title>
-</head>
+<section class="header-section">
+    <include src="src/layouts/main-header.html"></include>
 
-<body>
-    <section class="header-section">
-        <include src="src/layouts/main-header.html"></include>
-
-        <div class="container hero-container">
-            <div class="row h-100">
-                <div class="col-12 col-md-5 d-flex flex-column justify-content-start justify-content-md-center">
-                    <div class="hero-section text-center text-md-start">
-                        <h1 class="mb-5 d-none d-md-block">Shop Now.<br>Pay Later.</h1>
-                        <h1 class="my-4 d-md-none">Shop Now. Pay Later.</h1>
-                    </div>
-                    <div class="d-flex align-items-center position-relative d-md-none w-100 my-5">
-                        <div class="slider w-100">
-                            <div class="slider__item"><img src="assets/img/1.png" alt=""></div>
-                            <div class="slider__item"><img src="assets/img/2.png" alt=""></div>
-                            <div class="slider__item"><img src="assets/img/3.png" alt=""></div>
-                            <div class="slider__item"><img src="assets/img/4.png" alt=""></div>
-                        </div>
-
-                        <div class="hero-img">
-                            <img src="assets/img/bag-popping-out.png" alt="">
-                        </div>
-                    </div>
-                    <div class="hero-section text-center text-md-start mt-4 mt-md-0">
-                        <h4 class="mp-text-dark-blue mb-4 mb-md-5">You can now shop at your favourite online store today
-                            and pay
-                            later using mintpay.</h4>
-                        <a class="mp-btn" href="stores.html">Shop now</a>
-                    </div>
+    <div class="container hero-container">
+        <div class="row h-100">
+            <div class="col-12 col-md-5 d-flex flex-column justify-content-start justify-content-md-center">
+                <div class="hero-section text-center text-md-start">
+                    <h1 class="mb-5 d-none d-md-block">Shop Now.<br>Pay Later.</h1>
+                    <h1 class="my-4 d-md-none">Shop Now. Pay Later.</h1>
                 </div>
-
-                <div class="col-12 col-md-7 d-none d-md-flex align-items-center position-relative">
+                <div class="d-flex align-items-center position-relative d-md-none w-100 my-5">
                     <div class="slider w-100">
                         <div class="slider__item"><img src="assets/img/1.png" alt=""></div>
                         <div class="slider__item"><img src="assets/img/2.png" alt=""></div>
@@ -58,142 +23,171 @@
                         <img src="assets/img/bag-popping-out.png" alt="">
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="how-it-works-section">
-        <div class="container">
-            <div class="header-text-block text-center">
-                <h2 class="mp-text-dark-blue mb-4" data-aos="fade-down" >How it works</h2>
-                <h4 data-aos="fade-down">We’ve partnered with your favourite retailers to offer you the flexibility to pay</h4>
+                <div class="hero-section text-center text-md-start mt-4 mt-md-0">
+                    <h4 class="mp-text-dark-blue mb-4 mb-md-5">You can now shop at your favourite online store today
+                        and pay
+                        later using mintpay.</h4>
+                    <a class="mp-btn" href="stores.html">Shop now</a>
+                </div>
             </div>
 
-            <div class="row step-block">
-                <div class="col-12 col-lg-4 mb-5 mb-lg-0" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000">
-                    <img class=" mb-lg-4" src="assets/img/how-it-works-1.png" alt="">
-                    <h3 class="step-no mb-2">01.</h3>
-                    <h5 class="px-sm-4">Choose Mintpay as the payment option at the checkout.</h5>
+            <div class="col-12 col-md-7 d-none d-md-flex align-items-center position-relative">
+                <div class="slider w-100">
+                    <div class="slider__item"><img src="assets/img/1.png" alt=""></div>
+                    <div class="slider__item"><img src="assets/img/2.png" alt=""></div>
+                    <div class="slider__item"><img src="assets/img/3.png" alt=""></div>
+                    <div class="slider__item"><img src="assets/img/4.png" alt=""></div>
                 </div>
-                <div class="col-12 col-lg-4 mb-5 mb-lg-0" data-aos="flip-left" data-aos-offset="200" data-aos-duration="1000">
-                    <img class="mb-lg-4" src="assets/img/how-it-works-2.png" alt="">
-                    <h3 class="step-no mb-2">02.</h3>
-                    <h5 class="px-sm-4">Pay the first installment at point of purchase using debit or credit card.</h5>
-                </div>
-                <div class="col-12 col-lg-4" data-aos="flip-left" data-aos-offset="300" data-aos-duration="1000">
-                    <img class="mb-lg-4" src="assets/img/how-it-works-3.png" alt="">
-                    <h3 class="step-no mb-2">03.</h3>
-                    <h5 class="px-sm-4">Get your order first and the balance amount will be automatically charged on the
-                        due dates.</h5>
+
+                <div class="hero-img">
+                    <img src="assets/img/bag-popping-out.png" alt="">
                 </div>
             </div>
         </div>
-    </section>
-    <section class="banner-section black-gradient">
-        <div class="container text-center">
+    </div>
+
+</section>
+
+<section class="how-it-works-section">
+    <div class="container">
+        <div class="header-text-block text-center">
+            <h2 class="mp-text-dark-blue mb-4" data-aos="fade-down">How it works</h2>
+            <h4 data-aos="fade-down">We’ve partnered with your favourite retailers to offer you the flexibility to pay
+            </h4>
+        </div>
+
+        <div class="row step-block">
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0" data-aos="flip-left" data-aos-offset="100"
+                data-aos-duration="1000">
+                <img class=" mb-lg-4" src="assets/img/how-it-works-1.png" alt="">
+                <h3 class="step-no mb-2">01.</h3>
+                <h5 class="px-sm-4">Choose Mintpay as the payment option at the checkout.</h5>
+            </div>
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0" data-aos="flip-left" data-aos-offset="200"
+                data-aos-duration="1000">
+                <img class="mb-lg-4" src="assets/img/how-it-works-2.png" alt="">
+                <h3 class="step-no mb-2">02.</h3>
+                <h5 class="px-sm-4">Pay the first installment at point of purchase using debit or credit card.</h5>
+            </div>
+            <div class="col-12 col-lg-4" data-aos="flip-left" data-aos-offset="300" data-aos-duration="1000">
+                <img class="mb-lg-4" src="assets/img/how-it-works-3.png" alt="">
+                <h3 class="step-no mb-2">03.</h3>
+                <h5 class="px-sm-4">Get your order first and the balance amount will be automatically charged on the
+                    due dates.</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner-section black-gradient">
+    <div class="container text-center">
+        <div class="three-text-line d-flex flex-column flex-sm-row align-items-center justify-content-center flex-wrap">
+            <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="1000">No interest</h2>
+            <div class="dot-separator d-none d-sm-block" data-aos="zoom-in" data-aos-offset="200"
+                data-aos-duration="1000"></div>
+            <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000">No hidden fees
+            </h2>
+            <div class="dot-separator d-none d-sm-block" data-aos="zoom-in" data-aos-offset="300"
+                data-aos-duration="1000"></div>
+            <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1000">No worries</h2>
+        </div>
+
+        <h4 class="mp-text-light mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="1000">Payments are
+            automatically charged from your debit or credit card</h4>
+
+        <a class="mp-btn" href="#" data-aos="fade-up" data-aos-offset="350" data-aos-duration="1000">Sign up now</a>
+    </div>
+</section>
+<section class="split-section">
+    <div class="container">
+        <div class="row">
             <div
-                class="three-text-line d-flex flex-column flex-sm-row align-items-center justify-content-center flex-wrap">
-                <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="1000">No interest</h2>
-                <div class="dot-separator d-none d-sm-block" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000"></div>
-                <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000">No hidden fees</h2>
-                <div class="dot-separator d-none d-sm-block" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1000"></div>
-                <h2 class="mp-text-light" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1000">No worries</h2>
+                class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center text-center text-lg-start">
+                <h2 class="mp-text-dark-blue d-none d-lg-block mb-5" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-duration="1000">Own your<br>online shopping<br>freedom</h2>
+                <h2 class="mp-text-dark-blue d-lg-none mb-4" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-duration="1000">Own your online shopping freedom</h2>
+                <h4 class="mb-5 pe-lg-5" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">Don't let
+                    low balance ruin your shopping experience. With mintpay, you can
+                    buy what you want-when you want it.</h4>
+                <button class="mp-btn mp-btn--secondary" data-aos="fade-right" data-aos-offset="300"
+                    data-aos-duration="1000">Shop now</button>
             </div>
-
-            <h4 class="mp-text-light mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="1000">Payments are automatically charged from your debit or credit card</h4>
-
-            <a class="mp-btn" href="#" data-aos="fade-up" data-aos-offset="350" data-aos-duration="1000">Sign up now</a>
-        </div>
-    </section>
-    <section class="split-section">
-        <div class="container">
-            <div class="row">
-                <div
-                    class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center text-center text-lg-start">
-                    <h2 class="mp-text-dark-blue d-none d-lg-block mb-5" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000">Own your<br>online shopping<br>freedom</h2>
-                    <h2 class="mp-text-dark-blue d-lg-none mb-4" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000">Own your online shopping freedom</h2>
-                    <h4 class="mb-5 pe-lg-5" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">Don't let low balance ruin your shopping experience. With mintpay, you can
-                        buy what you want-when you want it.</h4>
-                    <button class="mp-btn mp-btn--secondary" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">Shop now</button>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="img-wrapper">
-                        <img src="assets/img/shopping-freedom.jpg" alt="" data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000">
-                        <div class="dot-square" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="2500"></div>
-                    </div>
+            <div class="col-12 col-lg-6">
+                <div class="img-wrapper">
+                    <img src="assets/img/shopping-freedom.jpg" alt="" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-duration="1000">
+                    <div class="dot-square" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="2500"></div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="testimonial-section">
-        <div class="container">
-            <h4 class="mp-text-dark-blue text-center">Our customers’ feedback are what we value the most</h4>
-            <div class="testimonial-slider mt-4">
-                <div class="testimonial">
-                    <div class="testimonial__text px-md-5">“Very convenient and stress free. Highly recommended.” -
-                        Giesyl Ann</div>
-                    <img src="" alt="" class="testimonial__img">
-                </div>
+    </div>
+</section>
+<section class="testimonial-section">
+    <div class="container">
+        <h4 class="mp-text-dark-blue text-center">Our customers’ feedback are what we value the most</h4>
+        <div class="testimonial-slider mt-4">
+            <div class="testimonial">
+                <div class="testimonial__text px-md-5">“Very convenient and stress free. Highly recommended.” -
+                    Giesyl Ann</div>
+                <img src="" alt="" class="testimonial__img">
+            </div>
 
-                <div class="testimonial">
-                    <div class="testimonial__text px-md-5">"Just what I was looking for. The very best. I love mintpay.
-                        I could probably go into sales for you."
-                        - Sonnnie Z.</div>
-                    <img src="" alt="" class="testimonial__img">
-                </div>
+            <div class="testimonial">
+                <div class="testimonial__text px-md-5">"Just what I was looking for. The very best. I love mintpay.
+                    I could probably go into sales for you."
+                    - Sonnnie Z.</div>
+                <img src="" alt="" class="testimonial__img">
+            </div>
 
-                <div class="testimonial">
-                    <div class="testimonial__text px-md-5">"Absolutely wonderful! If you aren't sure, always go for
-                        mintpay. It's really wonderful. Thank you for making it painless, pleasant and most of all
-                        hassle free!"
-                        - Olag J.</div>
-                    <img src="" alt="" class="testimonial__img">
-                </div>
+            <div class="testimonial">
+                <div class="testimonial__text px-md-5">"Absolutely wonderful! If you aren't sure, always go for
+                    mintpay. It's really wonderful. Thank you for making it painless, pleasant and most of all
+                    hassle free!"
+                    - Olag J.</div>
+                <img src="" alt="" class="testimonial__img">
+            </div>
 
-                <div class="testimonial">
-                    <div class="testimonial__text px-md-5">"Just what I was looking for. Since I invested in mintpay I
-                        made over 100,000 dollars profits."
-                        - Phylys E.</div>
-                    <img src="" alt="" class="testimonial__img">
-                </div>
+            <div class="testimonial">
+                <div class="testimonial__text px-md-5">"Just what I was looking for. Since I invested in mintpay I
+                    made over 100,000 dollars profits."
+                    - Phylys E.</div>
+                <img src="" alt="" class="testimonial__img">
+            </div>
 
-                <div class="testimonial">
-                    <div class="testimonial__text">"You've saved our business! We were treated like royalty. Best.
-                        Product. Ever!"
-                        - Kissie F.</div>
-                    <img src="" alt="" class="testimonial__img">
-                </div>
+            <div class="testimonial">
+                <div class="testimonial__text">"You've saved our business! We were treated like royalty. Best.
+                    Product. Ever!"
+                    - Kissie F.</div>
+                <img src="" alt="" class="testimonial__img">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="banner-section blue-gradient">
-        <div class="container text-center">
-            <h2 class="mp-text-light mb-4" data-aos="fade-down" data-aos-duration="1000">Have a business and<br>want to sell with Mintpay?</h2>
+<section class="banner-section blue-gradient">
+    <div class="container text-center">
+        <h2 class="mp-text-light mb-4" data-aos="fade-down" data-aos-duration="1000">Have a business and<br>want to sell
+            with Mintpay?</h2>
 
-            <h4 class="mp-text-light mb-5" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="1000">Convert more customers, multiply your sales</h4>
+        <h4 class="mp-text-light mb-5" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="1000">Convert more
+            customers, multiply your sales</h4>
 
-            <a class="mp-btn" href="#" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">Partner with us</a>
+        <a class="mp-btn" href="#" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">Partner with us</a>
+    </div>
+</section>
+
+<section class="logo-section">
+    <div class="container">
+        <div class="logo-slider">
+            <img class="px-4 px-md-5" src="assets/img/stripes-n-checkes.png" alt="">
+
+            <img class="px-4 px-md-5" src="assets/img/urban.png" alt="">
+
+            <img class="px-4 px-md-5" src="assets/img/iris-garden.png" alt="">
+
+            <img class="px-4 px-md-5" src="assets/img/zigma-jones.png" alt="">
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="logo-section">
-        <div class="container">
-            <div class="logo-slider">
-                <img class="px-4 px-md-5" src="assets/img/stripes-n-checkes.png" alt="">
-
-                <img class="px-4 px-md-5" src="assets/img/urban.png" alt="">
-
-                <img class="px-4 px-md-5" src="assets/img/iris-garden.png" alt="">
-
-                <img class="px-4 px-md-5" src="assets/img/zigma-jones.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <include src="src/layouts/main-footer.html"></include>
-
-</body>
-
-</html>
+<include src="src/layouts/main-footer.html"></include>

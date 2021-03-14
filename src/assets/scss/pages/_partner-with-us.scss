@@ -1,0 +1,52 @@
+.how-to-section {
+    padding: 6rem 0;
+    margin-top: 6rem;
+    background-color: $blue-100;
+
+    .how-to-steps {
+        .step-item {
+            text-align: center;
+
+            img {
+                width: 10rem;
+            }
+
+            h4 {
+                font-weight: 600;
+                color: rgba($primary-black, 0.5);
+
+                span {
+                    color: $primary-black;
+                }
+            }
+
+            p {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}
+
+.integration-section {
+    padding: 6rem 0;
+
+    h4 {
+        @media (min-width: 1200px) {
+            padding: 0 10rem;
+        }
+    }
+
+    .int-logo-set {
+        margin-top: 4rem;
+
+        img {
+            height: 40px;
+            
+
+            @media (min-width: 768px) {
+                height: 50px;
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}

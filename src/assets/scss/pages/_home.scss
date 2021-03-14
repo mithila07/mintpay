@@ -1,7 +1,16 @@
 .header-section {
     background-color: #E9F1F7;
-    height: 100vh;
+    padding: 2rem 0 4rem;
     padding-top: 70px;
+
+    @media (min-width: 768px) {
+        padding: 0;
+        height: 100vh;
+    }
+
+    @media (min-height: 900px) {
+        height: 50vh;
+    }
 
     .hero-container {
         height: calc(100% - 70px);

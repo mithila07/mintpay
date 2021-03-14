@@ -35,4 +35,9 @@ body {
     &.green-bg {
         background-color: rgba($primary-green, 0.1);
     }
+
+    &.img-bg {
+        padding: 0;
+        position: relative;
+    }
 }
