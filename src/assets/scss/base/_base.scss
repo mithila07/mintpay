@@ -40,4 +40,10 @@ body {
         padding: 0;
         position: relative;
     }
+
+    h4 {
+        @media (min-width: 992px) {
+            padding: 0 8rem;
+        }
+    }
 }

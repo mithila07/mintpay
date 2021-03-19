@@ -53,13 +53,13 @@
         color: $white;
 
         &:before {
-            transform: translateX(300px) skewX(-15deg);
+            transform: translateX(400px) skewX(-15deg);
             opacity: 0.6;
             transition: .7s;
         }
     
         &:after {
-            transform: translateX(300px) skewX(-15deg);
+            transform: translateX(400px) skewX(-15deg);
             opacity: 1;
             transition: .7s;
         }

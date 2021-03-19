@@ -50,3 +50,14 @@
         }
     }
 }
+
+.partner-form-section {
+    padding: 6rem 0;
+    background-color: $primary-black;
+
+    h4 {
+        @media (min-width: 992px) {
+            padding: 0 10rem;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.mp-form {
+    @media (min-width: 1200px) {
+        padding: 0 5rem;
+    }
+}
+
+.mp-form-group {
+    &__label {
+        color: $white;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    input {
+        height: 50px;
+        border-radius: 8px;
+        background-color: $white;
+        color: $primary-black;
+        font-size: 16px;
+        padding: 0 15px;
+        width: 100%;
+        border: 0;
+        transition: .25s;
+        outline: 0;
+
+        &:active,
+        &:focus {
+            background-color: $blue-100;
+        }
+
+        @include placeholder {
+            color: rgba($primary-black, 0.2);
+        }
+    }
+
+    textarea {
+        min-height: 120px;
+        border-radius: 8px;
+        background-color: $white;
+        color: $primary-black;
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+        border: 0;
+        transition: .25s;
+        outline: 0;
+
+        &:active,
+        &:focus {
+            background-color: $blue-100;
+        }
+
+        @include placeholder {
+            color: rgba($primary-black, 0.2);
+        }
+    }
+}

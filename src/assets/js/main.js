@@ -1,9 +1,8 @@
 import 'slick-carousel';
 import AOS from 'aos';
-
-var jquery = require("jquery");
-window.$ = window.jQuery = jquery; // notice the definition of global variables here
-require("jquery/dist/jquery.js");
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 AOS.init({
     disable: 'tablet'
@@ -103,7 +102,7 @@ $(function () {
                 }
             }
         ]
-      });
+    });
     //filter-slider ends
 
     //fixed top bar class toggle starts
@@ -129,7 +128,7 @@ $(function () {
     //filter sticky top starts
     var firstHeight = $('.pink-bg').css("height");
     var height = parseInt(firstHeight);
-    
+
     $(window).scroll(function () {
         if ($(window).scrollTop() > height) {
             $(".filter-block").addClass("filter-block--sticky-top");
@@ -138,4 +137,8 @@ $(function () {
         }
     });
     //filter sticky top ends
+
+    //accordion activates starts
+
+    //accordion activates ends
 });
