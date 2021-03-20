@@ -168,9 +168,13 @@
         .store-img {
             img {
                 width: 100%;
-                height: 250px;
+                height: 170px;
                 border-radius: 10px;
                 object-fit: cover;
+
+                @media (min-width: 768px) {
+                    height: 250px;
+                }
 
                 @media (min-width: 768px) {
                     height: 300px;
@@ -261,6 +265,7 @@
     &--grid {
         margin-left: -15px;
         margin-right: -15px;
+        margin-bottom: 0;
 
         .store-block__item {
             flex: 0 0 50%;

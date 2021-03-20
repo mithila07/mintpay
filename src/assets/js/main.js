@@ -5,7 +5,7 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 AOS.init({
-    disable: 'tablet'
+    disable: 'mobile'
 });
 
 
