@@ -83,6 +83,113 @@
     </div>
 </section>
 
+<script type="text/javascript">
+    function submitToAPI(e) {
+        e.preventDefault();
+        var URL = "https://9pe7damgd2.execute-api.ap-south-1.amazonaws.com/live/partner-with-us";
+
+        var comp_name = document.getElementById("comp-name-input").value
+        var comp_url = document.getElementById("comp-url-input").value
+        var name = document.getElementById("name-input").value
+        var email = document.getElementById("email-input").value
+        var phone = document.getElementById("phone-input").value
+        var message = document.getElementById("message-input").value
+
+        var comp_name_error = document.getElementById("comp-name-input-error")
+        var comp_url_error = document.getElementById("comp-url-input-error")
+        var name_error = document.getElementById("name-input-error")
+        var email_error =  document.getElementById("email-input-error")
+        var phone_error = document.getElementById("phone-input-error")
+        var message_error = document.getElementById("message-input-error")
+
+        
+
+        const email_re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        const phone_re = /[0-9]{10}/;
+
+
+        if (comp_name==null || comp_name==""){
+            comp_name_error.innerText = "This is a required field"
+            return;
+        }
+        else{
+            comp_name_error.innerText = ''
+        }
+
+        if (comp_url==null || comp_url==""){
+            comp_url_error.innerText = "This is a required field"
+            return;
+        }
+        else{
+            comp_url_error.innerText = ''
+        }
+
+        if (name==null || name==""){
+            name_error.innerText= "This is a required field"
+            return;
+        }
+        else{
+            name_error.innerText = ''
+        }
+
+        if (email==null || email==""){
+            email_error.innerText = "This is a required field"
+            return;
+        }
+        else if (!email_re.test(String(email).toLowerCase())){
+            email_error.innerText = "Invalid email address"
+            return;
+        }
+        else{
+            email_error.innerText = ''
+        }
+
+        if (phone==null || phone==""){
+            phone_error.innerText = "This is a required field"
+            return;
+        }
+        else if (!phone_re.test(String(phone))){
+            phone_error.innerText = "Invalid phone number"
+            return;
+        }
+        else{
+            phone_error.innerText = ''
+        }
+
+
+        if (message==null || message==""){
+            message_error.innerText = "This is a required field"
+            return;
+        }
+        else{
+            message_error.innerText = ''
+        }
+
+
+
+        var http = new XMLHttpRequest();
+        var params = {
+            'comp_name': comp_name,
+            'comp_url': comp_url,
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'message': message
+        };
+        http.open('POST', URL, true);
+
+        http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status == 200) {
+                alert('Success');
+            }
+        }
+        http.send(JSON.stringify(params));
+     }
+</script>
+
 <section class="partner-form-section">
     <div class="container">
         <h2 class="text-light  mb-4 font-weight-semibold text-center">Write to us</h2>
@@ -92,41 +199,61 @@
             <div class="col-12 col-lg-6 mb-4">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Company name</label>
-                    <input type="text" name="" id="" placeholder="ABC wardrobe">
+                    <input type="text" name="" id="comp-name-input" placeholder="ABC wardrobe">
+                    <span class="mp-form-group__error" id="comp-name-input-error"></span>
                 </div>
             </div>
             <div class="col-12 col-lg-6 mb-4">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Company URL</label>
-                    <input type="text" name="" id="" placeholder="www.abcwardrobe.lk">
+                    <input type="text" name="" id="comp-url-input" placeholder="www.abcwardrobe.lk">
+                    <span class="mp-form-group__error" id="comp-url-input-error"></span>
                 </div>
             </div>
             <div class="col-12 col-lg-4 mb-4">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Your name</label>
-                    <input type="text" name="" id="" placeholder="John Doe">
+                    <input type="text" name="" id="name-input" placeholder="John Doe">
+                    <span class="mp-form-group__error" id="name-input-error"></span>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Email address</label>
-                    <input type="email" name="" id="" placeholder="johndoe@abcwardrobe.lk">
+                    <input type="email" name="" id="email-input" placeholder="johndoe@abcwardrobe.lk">
+                    <span class="mp-form-group__error" id="email-input-error"></span>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Phone number</label>
-                    <input type="tel" name="" id="" placeholder="0712345678">
+                    <input type="tel" name="" id="phone-input" placeholder="0712345678">
+                    <span class="mp-form-group__error" id="phone-input-error"></span>
                 </div>
             </div>
             <div class="col-12 mb-5">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Your message</label>
-                    <textarea name="" id="" placeholder="Write your enquiry here"></textarea>
+                    <textarea name="" id="message-input" placeholder="Write your enquiry here"></textarea>
+                    <span class="mp-form-group__error" id="message-input-error"></span>
                 </div>
             </div>
+            <div class="col-12 mb-5">
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                <script type="text/javascript">
+                    function verifyRecaptchaCallback(){
+                        document.getElementById('submit-button').disabled = false;
+                    }
+                </script>
+                <div class="mp-form-group">
+                    <div class="g-recaptcha" data-sitekey="6LcXXYsaAAAAAOlQFeMYTx6rxjdMoHhgt-W9hrhM" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                    <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
             <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4">
-                <button type="submit" role="button" class="mp-btn w-100">Submit form</button>
+                <button id="submit-button" type="submit" disabled onClick="submitToAPI(event)"  role="button" class="mp-btn w-100">Submit form</button>
             </div>
         </form>
     </div>
