@@ -75,9 +75,9 @@
         </div>
 
         <div class="int-logo-set d-flex flex-wrap justify-content-center justify-content-md-between align-items-center">
-            <img class="mb-5" src="assets/img/shopify.svg" alt="">
-            <img class="mb-5" src="assets/img/woo-commerce.svg" alt="">
-            <img class="mb-5" src="assets/img/magento.svg" alt="">
+            <img class="mb-5 mb-md-0" src="assets/img/shopify.svg" alt="">
+            <img class="mb-5 mb-md-0" src="assets/img/woo-commerce.svg" alt="">
+            <img class="mb-5 mb-md-0" src="assets/img/magento.svg" alt="">
             <img src="assets/img/prestashop.svg" alt="">
         </div>
     </div>
@@ -192,67 +192,67 @@
 
 <section class="partner-form-section">
     <div class="container">
-        <h2 class="text-light  mb-4 font-weight-semibold text-center">Write to us</h2>
+        <h2 class="text-light mb-4 font-weight-semibold text-center">Write to us</h2>
         <h4 class="text-light text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum non
             voluptatum ratione eum tempore nesciunt a animi porro! Libero, doloremque.</h4>
         <form class="mp-form row mt-5" action="">
-            <div class="col-12 col-lg-6 mb-4">
+            <div class="col-12 col-lg-6 mb-2">
                 <div class="mp-form-group">
-                    <label class="mp-form-group__label">Company name</label>
+                    <label class="mp-form-group__label">Company name *</label>
                     <input type="text" name="" id="comp-name-input" placeholder="ABC wardrobe">
                     <span class="mp-form-group__error" id="comp-name-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 mb-4">
+            <div class="col-12 col-lg-6 mb-2">
                 <div class="mp-form-group">
-                    <label class="mp-form-group__label">Company URL</label>
+                    <label class="mp-form-group__label">Company URL *</label>
                     <input type="text" name="" id="comp-url-input" placeholder="www.abcwardrobe.lk">
                     <span class="mp-form-group__error" id="comp-url-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 mb-4">
+            <div class="col-12 col-lg-4 mb-2">
                 <div class="mp-form-group">
-                    <label class="mp-form-group__label">Your name</label>
+                    <label class="mp-form-group__label">Your name *</label>
                     <input type="text" name="" id="name-input" placeholder="John Doe">
                     <span class="mp-form-group__error" id="name-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-2">
                 <div class="mp-form-group">
-                    <label class="mp-form-group__label">Email address</label>
+                    <label class="mp-form-group__label">Email address *</label>
                     <input type="email" name="" id="email-input" placeholder="johndoe@abcwardrobe.lk">
                     <span class="mp-form-group__error" id="email-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-2">
                 <div class="mp-form-group">
-                    <label class="mp-form-group__label">Phone number</label>
+                    <label class="mp-form-group__label">Phone number *</label>
                     <input type="tel" name="" id="phone-input" placeholder="0712345678">
                     <span class="mp-form-group__error" id="phone-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 mb-5">
+            <div class="col-12 mb-2">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Your message</label>
                     <textarea name="" id="message-input" placeholder="Write your enquiry here"></textarea>
                     <span class="mp-form-group__error" id="message-input-error"></span>
                 </div>
             </div>
-            <div class="col-12 mb-5">
+            <div class="col-12 col-md-6 col-lg-4">
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                 <script type="text/javascript">
                     function verifyRecaptchaCallback(){
                         document.getElementById('submit-button').disabled = false;
                     }
                 </script>
-                <div class="mp-form-group">
+                <div class="mp-form-group pb-md-0">
                     <div class="g-recaptcha" data-sitekey="6LcXXYsaAAAAAOlQFeMYTx6rxjdMoHhgt-W9hrhM" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                    <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                    <input class="d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-4 d-flex align-items-end">
                 <button id="submit-button" type="submit" disabled onClick="submitToAPI(event)"  role="button" class="mp-btn w-100">Submit form</button>
             </div>
         </form>

@@ -17,20 +17,6 @@ $(function () {
     });
     // main-menu and hamburger icon toggle ends
 
-    //slick slider starts
-    $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 0,
-        autoplaySpeed: 5000,
-        arrows: false,
-        dots: false,
-        cssEase: 'linear',
-        Infinite: true
-    });
-    //slick slider ends
-
     //logo slider starts
     $('.logo-slider').slick({
         slidesToShow: 4,

@@ -15,7 +15,19 @@
     .hero-container {
         height: calc(100% - 70px);
 
-        .hero-img {
+        .hero-section {
+            h1 {
+
+                .fade-in-delay {
+                    opacity: 0;
+                    animation: fadeIn 0.5s ease-in both;
+                    animation-delay: 1s;
+                    position: relative;
+                }
+            }
+        }
+
+        .hero-video {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -26,14 +38,30 @@
             align-items: center;
             justify-content: center;
 
-            img {
+            @media (min-width: 768px) {
+                justify-content: flex-end;
+            }
+
+            video {
                 width: 80%;
 
                 @media (min-width: 768px) {
-                    width: 100%;
+                    width: 90%;
                 }
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: -30px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
     }
 }
 
