@@ -240,6 +240,8 @@
         }
 
         img {
+            height: auto;
+            width: 250px !important;
             filter: grayscale(100%) opacity(30%);
 
             &.invert-color {

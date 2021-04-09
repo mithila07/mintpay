@@ -19,26 +19,25 @@ $(function () {
 
     //logo slider starts
     $('.logo-slider').slick({
-        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 4000,
         arrows: false,
         dots: false,
-        cssEase: 'linear',
+        cssEase: 'ease-in',
         Infinite: true,
+        centerMode: true,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 3,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 2,
                 }
             }
         ]
