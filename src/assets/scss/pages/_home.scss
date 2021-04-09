@@ -241,11 +241,23 @@
 
         img {
             height: auto;
-            width: 250px !important;
+            //width: 250px !important;
             filter: grayscale(100%) opacity(30%);
 
             &.invert-color {
                 filter: invert(100%) opacity(30%);
+            }
+
+            &.square-logo{
+                width: 220px !important;
+            }
+
+            &.rectangular-logo{
+                width: 280px !important;
+            }
+
+            &.long-rectangular-logo{
+                width: 340px !important;
             }
         }
     }
