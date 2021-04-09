@@ -1,5 +1,5 @@
 .header-section {
-    background-color: #E9F1F7;
+    background-color: #ecf3f7;
     padding: 2rem 0 4rem;
     padding-top: 70px;
 
@@ -16,13 +16,21 @@
         height: calc(100% - 70px);
 
         .hero-section {
-            h1 {
+            position: relative;
+            z-index: 2;
 
-                .fade-in-delay {
-                    opacity: 0;
-                    animation: fadeIn 0.5s ease-in both;
-                    animation-delay: 1s;
-                    position: relative;
+            .fade-in-delay {
+                opacity: 0;
+                animation: fadeIn 0.5s ease-in both;
+                animation-delay: 1s;
+                position: relative;
+
+                &.delay-1 {
+                    animation-delay: 1.7s;
+                }
+
+                &.delay-2 {
+                    animation-delay: 2.5s;
                 }
             }
         }
@@ -37,6 +45,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 1;
 
             @media (min-width: 768px) {
                 justify-content: flex-end;
@@ -248,15 +257,15 @@
                 filter: invert(100%) opacity(30%);
             }
 
-            &.square-logo{
+            &.square-logo {
                 width: 220px !important;
             }
 
-            &.rectangular-logo{
+            &.rectangular-logo {
                 width: 280px !important;
             }
 
-            &.long-rectangular-logo{
+            &.long-rectangular-logo {
                 width: 340px !important;
             }
         }
