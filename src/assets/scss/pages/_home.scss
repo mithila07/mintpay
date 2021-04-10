@@ -162,11 +162,11 @@
         }
 
         img {
-            height: clamp(25rem, 10vw, 40rem);
+            width: 80%;
+            height: auto;
 
             @media (min-width: 1200px) {
-                width: 80%;
-                height: auto;
+                height: clamp(25rem, 10vw, 40rem);
             }
         }
 

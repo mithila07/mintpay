@@ -1,7 +1,6 @@
 import 'slick-carousel';
 import AOS from 'aos';
 import $ from 'jquery';
-import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 AOS.init({
