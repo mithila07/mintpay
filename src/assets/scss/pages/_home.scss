@@ -80,7 +80,6 @@
 }
 
 .how-it-works-section {
-    padding: 6rem 0;
 
     .header-text-block {
         max-width: 30rem;
@@ -103,7 +102,6 @@
 }
 
 .banner-section {
-    padding: 6rem 0;
     position: relative;
 
     &::before {
@@ -148,7 +146,6 @@
 }
 
 .split-section {
-    padding: 6rem 0;
 
     .img-wrapper {
         position: relative;
@@ -167,6 +164,7 @@
 
             @media (min-width: 1200px) {
                 height: clamp(25rem, 10vw, 40rem);
+                width: auto;
             }
         }
 
@@ -192,7 +190,6 @@
 }
 
 .testimonial-section {
-    padding: 6rem 0;
 
     h4 {
         font-weight: 500;
@@ -240,7 +237,6 @@
 }
 
 .logo-section {
-    padding: 6rem 0;
 
     .logo-slider {
         .slick-track {

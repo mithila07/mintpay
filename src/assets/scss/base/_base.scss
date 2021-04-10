@@ -21,6 +21,11 @@ body {
     }
 }
 
+*::selection {
+    background-color: rgba($primary-pink, 0.5);
+    color: $primary-black;
+}
+
 .sub-page-header-section {
     padding: 8rem 0 6rem;
 
@@ -36,6 +41,10 @@ body {
         background-color: rgba($primary-green, 0.1);
     }
 
+    &.gray-bg {
+        background-color: rgba($primary-black, 0.1);
+    }
+
     &.img-bg {
         padding: 0;
         position: relative;
@@ -44,6 +53,16 @@ body {
     h4 {
         @media (min-width: 992px) {
             padding: 0 8rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $primary-pink;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
