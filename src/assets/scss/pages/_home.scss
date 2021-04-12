@@ -46,9 +46,11 @@
             align-items: center;
             justify-content: center;
             z-index: 1;
+            margin-top: 3rem;
 
             @media (min-width: 768px) {
                 justify-content: flex-end;
+                margin-top: 0;
             }
 
             video {
@@ -111,7 +113,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: url('/assets/img/banner-1.png') no-repeat center ;
+        background: url('/assets/img/banner-1.png') no-repeat center;
         background-size: cover;
         z-index: -1;
     }
@@ -151,10 +153,9 @@
         position: relative;
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
 
         @media (min-width: 992px) {
-            margin-top: 0;
+            margin-top: 3rem;
             justify-content: flex-start;
         }
 
@@ -162,6 +163,14 @@
             width: 80%;
             height: auto;
             margin-bottom: 3rem;
+
+            @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+                height: 100%;
+            }
+
+            @supports (-webkit-touch-callout: none) {
+                height: 100%;
+            }
 
             @media (min-width: 1200px) {
                 height: clamp(35rem, 10vw, 40rem);
