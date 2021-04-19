@@ -155,14 +155,18 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media (min-width: 992px) {
+        justify-content: center;
+    }
+
     &__item {
         padding: 0 1rem;
         outline: 0;
-        flex: 1 1 50%;
+        flex: 0 1 50%;
         margin-bottom: 1.5rem;
 
         @media (min-width: 992px) {
-            flex: 1 1 25%;
+            flex: 0 1 25%;
         }
 
         .store-img {
@@ -215,6 +219,10 @@
 
                             @media (min-width: 600px) {
                                 width: calc(100% - 200px);
+                            }
+
+                            @media (min-width: 992px) and (max-width: 1500px) {
+                                width: calc(100% - 100px);
                             }
                         }
 

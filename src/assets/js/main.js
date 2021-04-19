@@ -16,6 +16,18 @@ $(function () {
     });
     // main-menu and hamburger icon toggle ends
 
+    //nav links delay starts
+    $("a.menu-link[href]").click(function(e){
+        e.preventDefault();
+        if (this.href) {
+            var target = this.href;
+            setTimeout(function(){
+                window.location = target;
+            }, 500);
+        }
+    });
+    // nav links delay ends
+
     //logo slider starts
     $('.logo-slider').slick({
         slidesToScroll: 1,

@@ -1,6 +1,10 @@
 .slick-slide {
     opacity: 1;
     transition: opacity 1s ease-in-out;
+
+    * div {
+        outline: 0;
+    }
 }
 
 .slick-current {
