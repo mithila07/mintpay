@@ -45,6 +45,10 @@ body {
         background-color: rgba($primary-black, 0.1);
     }
 
+    &.blue-bg {
+        background-color: $blue-200;
+    }
+
     &.img-bg {
         padding: 0;
         position: relative;
@@ -59,6 +63,56 @@ body {
             text-decoration: none;
             color: $primary-pink;
             font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.not-found-page-section {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 300px;
+        height: 300px;
+        bottom: 0;
+        left: 2rem;
+        background: url('/assets/img/bionocular.png') no-repeat center;
+        background-size: contain;
+    }
+
+    .center-grid {
+        display: grid;
+        place-content: center;
+        text-align: center;
+    }
+
+    .big-title {
+        font-size: clamp(5rem, 30vw, 25rem);
+        background-color: $primary-blue;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba($white, 0.5) 0px 3px 3px;
+        opacity: 0.3;
+        line-height: 1;
+        margin-bottom: 3rem;
+    }
+
+    .big-text {
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 600;
+        color: $primary-blue;
+        margin-bottom: 1rem;
+
+        a {
+            color: $primary-pink;
+            text-decoration: none;
 
             &:hover {
                 text-decoration: underline;
