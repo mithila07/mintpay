@@ -17,11 +17,11 @@ $(function () {
     // main-menu and hamburger icon toggle ends
 
     //nav links delay starts
-    $("a.menu-link[href]").click(function(e){
+    $("a.menu-link[href]").click(function (e) {
         e.preventDefault();
         if (this.href) {
             var target = this.href;
-            setTimeout(function(){
+            setTimeout(function () {
                 window.location = target;
             }, 500);
         }
@@ -133,8 +133,12 @@ $(function () {
         }
     });
     //filter sticky top ends
-
-    //accordion activates starts
-
-    //accordion activates ends
+    
+    var linkScroll = $('.filter-block__slider__item');
+    linkScroll.click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top -150
+        }, 700);
+    });
 });
