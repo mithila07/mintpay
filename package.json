@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html src/404-not-found.html --no-cache",
+    "dev": "parcel src/index.html --no-cache",
     "prod": "parcel build src/index.html --public-url ./"
   },
   "keywords": [],
