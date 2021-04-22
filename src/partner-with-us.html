@@ -83,8 +83,10 @@
 </section>
 
 <script type="text/javascript">
+
     function submitToAPI(e) {
         e.preventDefault();
+
         var URL = "https://9pe7damgd2.execute-api.ap-south-1.amazonaws.com/live/partner-with-us";
 
         var comp_name = document.getElementById("comp-name-input").value
@@ -182,15 +184,35 @@
 
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
-                alert('Success');
+                document.getElementById('partner-form-section').scrollIntoView();
+                document.getElementById('success-message').classList.remove('d-none');
+                document.getElementById('partner-with-us-form').classList.add('d-none');
             }
         }
         http.send(JSON.stringify(params));
      }
 </script>
 
-<section class="partner-form-section padding-6-t-b">
-    <div class="container">
+<section id="partner-form-section" class="partner-form-section padding-6-t-b">
+
+    <div id="success-message" class="container padding-6-t-b d-none">
+        <div class="row">
+            <div class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate">
+                <div class="icon">
+                    <!--add tick mark here-->
+                    <i style="font-size: 60px; color: white;" class="fi-sr-check"></i>
+                    <!---------------------->
+                </div>
+                <!--/.icon-->
+                <h1>Success!</h1>
+                <p>Our support team will get in
+                    <br>touch with you.</p>
+            </div>
+            <!--/.success-->
+        </div>
+    </div>
+    <!--/.container-->
+    <div id="partner-with-us-form" class="container">
         <h2 class="text-light mb-4 font-weight-semibold text-center">Write to us</h2>
         <h4 class="text-light text-center">Whether you are a startup or large enterprise, we would love to give your customers the flexibility they deserve. Write to us today.</h4>
         <form class="mp-form row mt-5" action="">
