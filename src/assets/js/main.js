@@ -139,6 +139,6 @@ $(function () {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $(this.hash).offset().top -150
-        }, 700);
+        }, 100);
     });
 });

@@ -1,4 +1,4 @@
-<include src="src/layouts/head.html" locals='{"pageTitle": " Mintpay | Integrate Mintpay as a Payment Gateway"}'>
+<include src="src/layouts/head.html" locals='{"pageTitle": " Mintpay | Integrate Mintpay as a Payment Gateway", "pageDescription": "Add Mintpay to your online payment gateway compatible with any eCommerce platform. It is time to take your brand to a new level with buy now pay later"}'>
 </include>
 
 <section class="sub-page-header-section yellow-bg">
@@ -109,7 +109,6 @@
 
         if (comp_name==null || comp_name==""){
             comp_name_error.innerText = "This is a required field"
-            return;
         }
         else{
             comp_name_error.innerText = ''
@@ -117,7 +116,6 @@
 
         if (comp_url==null || comp_url==""){
             comp_url_error.innerText = "This is a required field"
-            return;
         }
         else{
             comp_url_error.innerText = ''
@@ -125,7 +123,6 @@
 
         if (name==null || name==""){
             name_error.innerText= "This is a required field"
-            return;
         }
         else{
             name_error.innerText = ''
@@ -133,11 +130,9 @@
 
         if (email==null || email==""){
             email_error.innerText = "This is a required field"
-            return;
         }
         else if (!email_re.test(String(email).toLowerCase())){
             email_error.innerText = "Invalid email address"
-            return;
         }
         else{
             email_error.innerText = ''
@@ -145,11 +140,9 @@
 
         if (phone==null || phone==""){
             phone_error.innerText = "This is a required field"
-            return;
         }
         else if (!phone_re.test(String(phone))){
             phone_error.innerText = "Invalid phone number"
-            return;
         }
         else{
             phone_error.innerText = ''
@@ -158,7 +151,6 @@
 
         if (message==null || message==""){
             message_error.innerText = "This is a required field"
-            return;
         }
         else{
             message_error.innerText = ''
