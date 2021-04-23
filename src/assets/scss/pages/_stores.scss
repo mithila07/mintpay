@@ -185,6 +185,10 @@
                 border-radius: 10px;
                 object-fit: cover;
 
+                @media (min-width: 576px) {
+                    height: 250px;
+                }
+
                 @media (min-width: 768px) {
                     height: 300px;
                 }
@@ -219,11 +223,11 @@
                         transition: .35s;
 
                         &.rectangular-logo {
-                            width: calc(100% - 50px);
+                            width: calc(100% - 70px);
                             height: auto;
 
-                            @media (min-width: 600px) {
-                                width: calc(100% - 200px);
+                            @media (min-width: 650px) {
+                                width: calc(100% - 170px);
                             }
 
                             @media (min-width: 992px) and (max-width: 1500px) {
@@ -235,8 +239,8 @@
                             height: calc(100% - 100px);
                             width: auto;
 
-                            @media (min-width: 600px) {
-                                height: calc(100% - 200px);
+                            @media (min-width: 650px) {
+                                height: calc(100% - 170px);
                             }
                         }
 
