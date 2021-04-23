@@ -180,7 +180,11 @@
 
             http.onreadystatechange = function() {
                 if(http.readyState == 4 && http.status == 200) {
-                    document.getElementById('partner-form-section').scrollIntoView();
+                    const id = 'partner-form-section';
+                    const yOffset = -150; 
+                    const element = document.getElementById(id);
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
                     document.getElementById('success-message').classList.remove('d-none');
                     document.getElementById('partner-with-us-form').classList.add('d-none');
                 }
@@ -190,11 +194,7 @@
 
         else{
             return;
-        }
-
-
-
-        
+        }        
      }
 </script>
 
@@ -210,6 +210,15 @@
                 <h1>Success!</h1>
                 <p>Our support team will get in
                 <br>touch with you.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="fail-message" class="container padding-6-t-b d-none">
+        <div class="row">
+            <div class="modalbox success col-sm-10 col-md-8 col-lg-4 offset-sm-1 offset-md-2 offset-lg-4 animate">             
+                <p>Unexpected error, please try
+                <br>again later.</p>
             </div>
         </div>
     </div>
