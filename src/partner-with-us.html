@@ -79,7 +79,14 @@
     </div>
 </section>
 
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <script type="text/javascript">
+
+    function verifyRecaptchaCallback(){
+        document.getElementById('submit-button').disabled = false;
+    }
+                
 
     function submitToAPI(e) {
         e.preventDefault();
@@ -196,6 +203,9 @@
             return;
         }        
      }
+
+    window.verifyRecaptchaCallback = verifyRecaptchaCallback;
+    window.submitToAPI = submitToAPI;
 </script>
 
 <section id="partner-form-section" class="partner-form-section padding-6-t-b">
@@ -264,17 +274,12 @@
             <div class="col-12 mb-2">
                 <div class="mp-form-group">
                     <label class="mp-form-group__label">Your message</label>
-                    <textarea name="" id="message-input" placeholder="Write your enquiry here"></textarea>
+                    <textarea name="" id="message-input" placeholder="Write your inquiry here"></textarea>
                     <span class="mp-form-group__error" id="message-input-error"></span>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                <script type="text/javascript">
-                    function verifyRecaptchaCallback(){
-                        document.getElementById('submit-button').disabled = false;
-                    }
-                </script>
+                
                 <div class="mp-form-group pb-md-0">
                     <div class="g-recaptcha" data-sitekey="6LcXXYsaAAAAAOlQFeMYTx6rxjdMoHhgt-W9hrhM" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                     <input class="d-none" data-recaptcha="true" required data-error="Please complete the Captcha">

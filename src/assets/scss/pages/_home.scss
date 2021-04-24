@@ -18,6 +18,10 @@
         .hero-section {
             position: relative;
             z-index: 2;
+
+            .hero-heading{
+                font-size: 70px;
+            }
         }
 
         .hero-img {

@@ -142,3 +142,127 @@ $(function () {
         }, 100);
     });
 });
+
+
+function verifyRecaptchaCallback(){
+        document.getElementById('submit-button').disabled = false;
+    }
+
+window.verifyRecaptchaCallback = verifyRecaptchaCallback;
+                
+
+    function submitToAPI(e) {
+        e.preventDefault();
+
+        var URL = "https://9pe7damgd2.execute-api.ap-south-1.amazonaws.com/live/partner-with-us";
+
+        var comp_name = document.getElementById("comp-name-input").value
+        var comp_url = document.getElementById("comp-url-input").value
+        var name = document.getElementById("name-input").value
+        var email = document.getElementById("email-input").value
+        var phone = document.getElementById("phone-input").value
+        var message = document.getElementById("message-input").value
+
+        var comp_name_error = document.getElementById("comp-name-input-error")
+        var comp_url_error = document.getElementById("comp-url-input-error")
+        var name_error = document.getElementById("name-input-error")
+        var email_error =  document.getElementById("email-input-error")
+        var phone_error = document.getElementById("phone-input-error")
+        var message_error = document.getElementById("message-input-error")
+        var submit = true;
+        
+
+        const email_re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        const phone_re = /[0-9]{10}/;
+
+
+        if (comp_name==null || comp_name==""){
+            comp_name_error.innerText = "This is a required field";
+            submit = false;
+        }
+        else{
+            comp_name_error.innerText = ''
+        }
+
+        if (comp_url==null || comp_url==""){
+            comp_url_error.innerText = "This is a required field";
+            submit = false;
+        }
+        else{
+            comp_url_error.innerText = ''
+        }
+
+        if (name==null || name==""){
+            name_error.innerText= "This is a required field";
+            submit = false;
+        }
+        else{
+            name_error.innerText = ''
+        }
+
+        if (email==null || email==""){
+            email_error.innerText = "This is a required field";
+            submit = false;
+        }
+        else if (!email_re.test(String(email).toLowerCase())){
+            email_error.innerText = "Invalid email address";
+            submit = false;
+        }
+        else{
+            email_error.innerText = ''
+        }
+
+        if (phone==null || phone==""){
+            phone_error.innerText = "This is a required field";
+            submit = false;
+        }
+        else if (!phone_re.test(String(phone))){
+            phone_error.innerText = "Invalid phone number";
+            submit = false;
+        }
+        else{
+            phone_error.innerText = ''
+        }
+
+
+        if (message==null || message==""){
+            message_error.innerText = "This is a required field"
+            submit = false;
+        }
+        else{
+            message_error.innerText = ''
+        }
+
+        if (submit === true){
+            var http = new XMLHttpRequest();
+            var params = {
+                'comp_name': comp_name,
+                'comp_url': comp_url,
+                'name': name,
+                'email': email,
+                'phone': phone,
+                'message': message
+            };
+            http.open('POST', URL, true);
+
+            http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+            http.onreadystatechange = function() {
+                if(http.readyState == 4 && http.status == 200) {
+                    const id = 'partner-form-section';
+                    const yOffset = -150; 
+                    const element = document.getElementById(id);
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                    document.getElementById('success-message').classList.remove('d-none');
+                    document.getElementById('partner-with-us-form').classList.add('d-none');
+                }
+            }
+            http.send(JSON.stringify(params));
+        }
+
+        else{
+            return;
+        }        
+     }
