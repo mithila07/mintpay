@@ -4,7 +4,8 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 AOS.init({
-    disable: 'mobile'
+    disable: 'mobile',
+    once: true
 });
 
 
@@ -133,7 +134,7 @@ $(function () {
         }
     });
     //filter sticky top ends
-    
+
     var linkScroll = $('.filter-block__slider__item');
     linkScroll.click(function (e) {
         e.preventDefault();
