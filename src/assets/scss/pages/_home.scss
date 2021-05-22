@@ -19,7 +19,7 @@
             position: relative;
             z-index: 2;
 
-            .hero-heading{
+            .hero-heading {
                 font-size: 70px;
             }
         }
@@ -310,5 +310,27 @@
     100% {
         opacity: 0;
         transform: translateY(46px);
+    }
+}
+
+
+.best-web-logo {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    z-index: 100;
+
+    @media (min-width: 576px) {
+        right: 2rem;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+
+        @media (min-width: 576px) {
+            width: 130px;
+            height: 130px;
+        }
     }
 }
