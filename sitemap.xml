@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://www.mintpay.lk/</loc>
+  <lastmod>2021-04-24T11:44:29+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/stores.html</loc>
+  <lastmod>2021-04-24T11:44:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/partner-with-us.html</loc>
+  <lastmod>2021-04-24T11:44:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/press.html</loc>
+  <lastmod>2021-04-24T11:44:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/support.html</loc>
+  <lastmod>2021-04-24T11:45:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/women.html</loc>
+  <lastmod>2021-04-24T11:45:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mintpay.lk/men.html</loc>
+  <lastmod>2021-04-24T11:44:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
