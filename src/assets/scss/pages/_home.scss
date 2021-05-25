@@ -316,21 +316,22 @@
 
 .best-web-logo {
     position: fixed;
-    top: 5rem;
-    right: 1rem;
+    bottom: 5rem;
+    right: 0.25rem;
     z-index: 100;
 
     @media (min-width: 576px) {
+        top: 5rem;
         right: 2rem;
     }
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
 
         @media (min-width: 576px) {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
         }
     }
 }
